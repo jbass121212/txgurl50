@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>TXGURL50 | Celebrating Jenelle</title>
+<title>Txgurl Turns 50 | Celebrating Jenelle</title>
 
 <style>
 
@@ -22,6 +22,7 @@ html {
     --black: #080808;
     --charcoal: #121212;
     --gold: #d8b47a;
+    --gold-light: #efcf97;
     --cream: #f5ead8;
     --soft-white: #f7f4ef;
 }
@@ -33,22 +34,26 @@ body {
     line-height: 1.6;
 }
 
-/* ---------------- HERO ---------------- */
+
+/* ==================================================
+   HERO
+================================================== */
 
 .hero {
     min-height: 100vh;
     position: relative;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
 
     background:
         linear-gradient(
             to bottom,
-            rgba(0,0,0,.18) 0%,
-            rgba(0,0,0,.30) 45%,
-            rgba(0,0,0,.88) 90%,
-            #080808 100%
+            rgba(0,0,0,.12) 0%,
+            rgba(0,0,0,.18) 45%,
+            rgba(0,0,0,.52) 75%,
+            rgba(8,8,8,.96) 100%
         ),
         url("dallas-skyline.png");
 
@@ -58,38 +63,119 @@ body {
 }
 
 .hero-content {
-    width: 100%;
-    max-width: 1200px;
+    width: min(1350px, 94%);
     margin: auto;
-    padding: 120px 40px 90px;
+    text-align: center;
+    padding: 90px 20px 80px;
 }
 
-.hero-title {
-    color: var(--cream);
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(4rem, 11vw, 9rem);
-    font-weight: 400;
-    letter-spacing: 5px;
-    line-height: .95;
+
+/* Txgurl + Turns + 50 */
+
+.hero-mainline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+    flex-wrap: nowrap;
 }
+
+.txgurl {
+    font-family: "Brush Script MT", "Segoe Script", cursive;
+    font-size: clamp(5.5rem, 12vw, 11rem);
+    font-style: italic;
+    line-height: .8;
+    color: var(--gold-light);
+
+    text-shadow:
+        0 4px 5px rgba(0,0,0,.9),
+        0 0 16px rgba(216,180,122,.28);
+}
+
+.turns {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.4rem, 3.2vw, 2.8rem);
+    letter-spacing: 10px;
+    color: var(--gold-light);
+    margin-top: 35px;
+}
+
+.big-50 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(8rem, 17vw, 14rem);
+    line-height: .8;
+    color: var(--gold-light);
+    font-weight: 400;
+
+    text-shadow:
+        0 5px 6px rgba(0,0,0,.95),
+        0 0 22px rgba(216,180,122,.35);
+}
+
+
+/* Fifty Looks Good */
 
 .hero-script {
-    color: var(--gold);
-    font-family: Georgia, "Times New Roman", serif;
+    margin-top: 18px;
+
+    font-family: "Brush Script MT", "Segoe Script", cursive;
+    font-size: clamp(2.4rem, 5.5vw, 4.8rem);
     font-style: italic;
-    font-size: clamp(2rem, 5vw, 4.2rem);
-    margin-top: 12px;
+
+    color: var(--gold);
+    text-shadow: 0 3px 6px rgba(0,0,0,.9);
 }
 
-.hero-subtitle {
-    margin-top: 25px;
-    letter-spacing: 7px;
-    text-transform: uppercase;
-    color: var(--cream);
-    font-size: clamp(.85rem, 2vw, 1.25rem);
+
+/* Birthday greeting */
+
+.hero-birthday {
+    position: relative;
+    display: inline-block;
+
+    margin-top: 32px;
+    padding: 12px 42px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(1.35rem, 3vw, 2.5rem);
+    font-weight: 800;
+    letter-spacing: 6px;
+
+    color: #fff4e5;
+
+    text-shadow:
+        0 2px 4px #000,
+        0 0 10px rgba(239,207,151,.24);
 }
 
-/* ---------------- SECTIONS ---------------- */
+.hero-birthday::before,
+.hero-birthday::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 110px;
+    height: 1px;
+    background: var(--gold);
+}
+
+.hero-birthday::before {
+    right: 100%;
+}
+
+.hero-birthday::after {
+    left: 100%;
+}
+
+.hero-heart {
+    margin-top: 8px;
+    color: var(--gold);
+    font-size: 1.5rem;
+}
+
+
+/* ==================================================
+   SECTIONS
+================================================== */
 
 section {
     padding: 90px 24px;
@@ -121,7 +207,10 @@ section {
     margin: 20px auto 45px;
 }
 
-/* ---------------- INTRO ---------------- */
+
+/* ==================================================
+   INTRO
+================================================== */
 
 .intro-grid {
     display: grid;
@@ -166,7 +255,10 @@ section {
     margin-top: 30px;
 }
 
-/* ---------------- PHOTO STORY ---------------- */
+
+/* ==================================================
+   PHOTO STORY
+================================================== */
 
 .story-grid {
     display: grid;
@@ -203,7 +295,10 @@ section {
     color: #cfc9c0;
 }
 
-/* ---------------- RUNNING ---------------- */
+
+/* ==================================================
+   RUNNING
+================================================== */
 
 .running-grid {
     display: grid;
@@ -240,7 +335,10 @@ section {
     font-size: 1.15rem;
 }
 
-/* ---------------- MUSIC ---------------- */
+
+/* ==================================================
+   MUSIC / SHAUN
+================================================== */
 
 .music-section {
     text-align: center;
@@ -284,7 +382,10 @@ section {
     color: #111;
 }
 
-/* ---------------- ICE CREAM ---------------- */
+
+/* ==================================================
+   ICE CREAM
+================================================== */
 
 .icecream-box {
     max-width: 750px;
@@ -293,6 +394,7 @@ section {
     padding: 65px 35px;
     border-radius: 28px;
     border: 1px solid rgba(216,180,122,.45);
+
     background:
         linear-gradient(
             135deg,
@@ -331,7 +433,10 @@ section {
     font-weight: bold;
 }
 
-/* ---------------- FUTURE GALLERY ---------------- */
+
+/* ==================================================
+   FUTURE PARTY GALLERY
+================================================== */
 
 .gallery-coming {
     max-width: 900px;
@@ -360,7 +465,10 @@ section {
     margin-bottom: 20px;
 }
 
-/* ---------------- ENDING ---------------- */
+
+/* ==================================================
+   END
+================================================== */
 
 .final-section {
     text-align: center;
@@ -381,17 +489,57 @@ section {
     color: var(--cream);
 }
 
-/* ---------------- MOBILE ---------------- */
+
+/* ==================================================
+   MOBILE
+================================================== */
 
 @media (max-width: 750px) {
 
     .hero {
-        min-height: 85vh;
+        min-height: 82vh;
         background-position: 58% center;
     }
 
     .hero-content {
-        padding: 80px 22px 65px;
+        padding: 75px 14px 60px;
+    }
+
+    .hero-mainline {
+        gap: 7px;
+        flex-wrap: wrap;
+    }
+
+    .txgurl {
+        width: 100%;
+        font-size: clamp(4.5rem, 22vw, 7rem);
+    }
+
+    .turns {
+        font-size: 1rem;
+        letter-spacing: 4px;
+        margin-top: 0;
+    }
+
+    .big-50 {
+        font-size: clamp(6rem, 30vw, 9rem);
+    }
+
+    .hero-script {
+        font-size: clamp(2.1rem, 10vw, 3.4rem);
+        margin-top: 5px;
+    }
+
+    .hero-birthday {
+        font-size: 1rem;
+        letter-spacing: 3px;
+        padding: 10px 10px;
+        margin-top: 22px;
+    }
+
+    .hero-birthday::before,
+    .hero-birthday::after {
+        display: none;
     }
 
     section {
@@ -408,15 +556,6 @@ section {
     .running-grid {
         gap: 35px;
     }
-
-    .hero-title {
-        letter-spacing: 2px;
-    }
-
-    .hero-subtitle {
-        letter-spacing: 4px;
-    }
-
 }
 
 </style>
@@ -432,16 +571,32 @@ section {
 
     <div class="hero-content">
 
-        <h1 class="hero-title">
-            TXGURL50
-        </h1>
+        <div class="hero-mainline">
+
+            <span class="txgurl">
+                Txgurl
+            </span>
+
+            <span class="turns">
+                TURNS
+            </span>
+
+            <span class="big-50">
+                50
+            </span>
+
+        </div>
 
         <div class="hero-script">
             Fifty Looks Good on You
         </div>
 
-        <div class="hero-subtitle">
-            Happy 50th, Jenelle!
+        <div class="hero-birthday">
+            HAPPY BIRTHDAY, JENELLE!
+        </div>
+
+        <div class="hero-heart">
+            ♡
         </div>
 
     </div>
@@ -622,8 +777,6 @@ section {
                 friendships and moments with us forever.
             </p>
 
-            <!-- We'll add Shaun Martin's YouTube link here -->
-
             <a href="#"
                class="music-button">
                LISTEN & REMEMBER
@@ -660,8 +813,6 @@ section {
             <p>
                 A little birthday treat is waiting for you.
             </p>
-
-            <!-- We'll connect the gift card here -->
 
             <a href="#"
                class="gift-button">
