@@ -1,375 +1,725 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>TXGURL50 | Celebrating Jenelle</title>
+<title>TXGURL50 | Celebrating Jenelle</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<style>
 
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-  font-family: Arial, Helvetica, sans-serif;
-  color: #f5f2ec;
-  line-height: 1.6;
-
-  background:
-    linear-gradient(
-      rgba(0, 0, 0, 0.68),
-      rgba(0, 0, 0, 0.78)
-    ),
-    url("dallas-skyline.png");
-
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-}
-  font-family: Arial, Helvetica, sans-serif;
-  color: #f5f2ec;
-  line-height: 1.6;
-
-  background:
-    linear-gradient(
-      rgba(0, 0, 0, 0.68),
-      rgba(0, 0, 0, 0.78)
-    ),
-    url("dallas-skyline.png");
-
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-    /* HERO */
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --black: #080808;
+    --charcoal: #121212;
+    --gold: #d8b47a;
+    --cream: #f5ead8;
+    --soft-white: #f7f4ef;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--black);
+    color: var(--soft-white);
+    line-height: 1.6;
+}
+
+/* ---------------- HERO ---------------- */
+
+.hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,.18) 0%,
+            rgba(0,0,0,.30) 45%,
+            rgba(0,0,0,.88) 90%,
+            #080808 100%
+        ),
+        url("dallas-skyline.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 120px 40px 90px;
+}
+
+.hero-title {
+    color: var(--cream);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(4rem, 11vw, 9rem);
+    font-weight: 400;
+    letter-spacing: 5px;
+    line-height: .95;
+}
+
+.hero-script {
+    color: var(--gold);
+    font-family: Georgia, "Times New Roman", serif;
+    font-style: italic;
+    font-size: clamp(2rem, 5vw, 4.2rem);
+    margin-top: 12px;
+}
+
+.hero-subtitle {
+    margin-top: 25px;
+    letter-spacing: 7px;
+    text-transform: uppercase;
+    color: var(--cream);
+    font-size: clamp(.85rem, 2vw, 1.25rem);
+}
+
+/* ---------------- SECTIONS ---------------- */
+
+section {
+    padding: 90px 24px;
+}
+
+.container {
+    width: min(1100px, 100%);
+    margin: auto;
+}
+
+.section-dark {
+    background:
+        radial-gradient(circle at top, #181818 0%, #0b0b0b 60%);
+}
+
+.section-title {
+    font-family: Georgia, "Times New Roman", serif;
+    color: var(--cream);
+    text-align: center;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.gold-line {
+    width: 80px;
+    height: 1px;
+    background: var(--gold);
+    margin: 20px auto 45px;
+}
+
+/* ---------------- INTRO ---------------- */
+
+.intro-grid {
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.photo-card {
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid rgba(216,180,122,.45);
+    box-shadow: 0 20px 60px rgba(0,0,0,.55);
+}
+
+.photo-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.intro-copy h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: var(--cream);
+    font-weight: 400;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.intro-copy p {
+    color: #ddd5ca;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.3rem;
+}
+
+.script-message {
+    color: var(--gold);
+    font-family: Georgia, "Times New Roman", serif;
+    font-style: italic;
+    font-size: 2rem;
+    margin-top: 30px;
+}
+
+/* ---------------- PHOTO STORY ---------------- */
+
+.story-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.story-card {
+    background: rgba(255,255,255,.025);
+    border: 1px solid rgba(216,180,122,.25);
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.story-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.story-copy {
+    padding: 28px;
+}
+
+.story-copy h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: var(--gold);
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 7px;
+}
+
+.story-copy p {
+    color: #cfc9c0;
+}
+
+/* ---------------- RUNNING ---------------- */
+
+.running-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.running-photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 24px;
+    border: 1px solid rgba(216,180,122,.4);
+}
+
+.running-copy h2 {
+    color: var(--cream);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 400;
+}
+
+.running-copy h3 {
+    color: var(--gold);
+    font-family: Georgia, "Times New Roman", serif;
+    font-style: italic;
+    font-size: 2rem;
+    margin: 10px 0 20px;
+}
+
+.running-copy p {
+    color: #d2cdc6;
+    font-size: 1.15rem;
+}
+
+/* ---------------- MUSIC ---------------- */
+
+.music-section {
+    text-align: center;
+}
+
+.music-photo {
+    max-width: 650px;
+    margin: 40px auto 35px;
+}
+
+.music-photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 24px;
+    border: 1px solid rgba(216,180,122,.45);
+}
+
+.music-copy {
+    max-width: 750px;
+    margin: auto;
+    color: #d7d0c7;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.2rem;
+}
+
+.music-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 28px;
+    border: 1px solid var(--gold);
+    border-radius: 100px;
+    color: var(--gold);
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: .25s ease;
+}
+
+.music-button:hover {
+    background: var(--gold);
+    color: #111;
+}
+
+/* ---------------- ICE CREAM ---------------- */
+
+.icecream-box {
+    max-width: 750px;
+    margin: auto;
+    text-align: center;
+    padding: 65px 35px;
+    border-radius: 28px;
+    border: 1px solid rgba(216,180,122,.45);
+    background:
+        linear-gradient(
+            135deg,
+            rgba(216,180,122,.08),
+            rgba(255,255,255,.02)
+        );
+}
+
+.icecream-icon {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+}
+
+.icecream-box h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: var(--cream);
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-weight: 400;
+}
+
+.icecream-box p {
+    max-width: 550px;
+    margin: 18px auto 0;
+    color: #d5cec4;
+    font-size: 1.1rem;
+}
+
+.gift-button {
+    display: inline-block;
+    margin-top: 30px;
+    background: var(--gold);
+    color: #111;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 100px;
+    font-weight: bold;
+}
+
+/* ---------------- FUTURE GALLERY ---------------- */
+
+.gallery-coming {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    padding: 80px 25px;
+    border: 1px dashed rgba(216,180,122,.55);
+    border-radius: 28px;
+}
+
+.gallery-coming h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: var(--cream);
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    font-weight: 400;
+}
+
+.gallery-coming p {
+    color: #cfc8bf;
+    margin-top: 15px;
+    font-size: 1.1rem;
+}
+
+.camera {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+/* ---------------- ENDING ---------------- */
+
+.final-section {
+    text-align: center;
+    padding: 110px 20px;
+}
+
+.final-section h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-style: italic;
+    color: var(--gold);
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-weight: 400;
+}
+
+.final-section p {
+    margin-top: 25px;
+    letter-spacing: 5px;
+    color: var(--cream);
+}
+
+/* ---------------- MOBILE ---------------- */
+
+@media (max-width: 750px) {
 
     .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 40px 20px;
+        min-height: 85vh;
+        background-position: 58% center;
     }
 
     .hero-content {
-      max-width: 800px;
+        padding: 80px 22px 65px;
     }
-
-    .hero img {
-      width: 280px;
-      height: 360px;
-      object-fit: cover;
-      border-radius: 20px;
-      margin-bottom: 25px;
-      box-shadow: 0 10px 35px rgba(0,0,0,.5);
-    }
-
-    .hero h1 {
-      font-size: clamp(3rem, 10vw, 7rem);
-      letter-spacing: 4px;
-      margin-bottom: 5px;
-    }
-
-    .hero h2 {
-      font-size: clamp(1.8rem, 5vw, 3rem);
-      font-weight: 400;
-      margin-bottom: 15px;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      opacity: .85;
-    }
-
-    /* GENERAL SECTIONS */
 
     section {
-      padding: 80px 20px;
+        padding: 65px 18px;
     }
 
-    .container {
-      max-width: 1000px;
-      margin: auto;
+    .intro-grid,
+    .running-grid,
+    .story-grid {
+        grid-template-columns: 1fr;
     }
 
-    .section-title {
-      text-align: center;
-      font-size: 2.3rem;
-      margin-bottom: 40px;
+    .intro-grid,
+    .running-grid {
+        gap: 35px;
     }
 
-    /* PHOTO GRID */
-
-    .photo-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
+    .hero-title {
+        letter-spacing: 2px;
     }
 
-    .photo-grid img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 18px;
-  box-shadow: 0 12px 35px rgba(0,0,0,.45);
+    .hero-subtitle {
+        letter-spacing: 4px;
+    }
+
 }
 
-    /* RUNNING */
-
-    .feature {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 45px;
-      align-items: center;
-    }
-
-    .feature img {
-      width: 100%;
-      border-radius: 20px;
-    }
-
-    .feature h2 {
-      font-size: 2.5rem;
-      margin-bottom: 15px;
-    }
-
-    .feature p {
-      font-size: 1.1rem;
-      opacity: .85;
-    }
-
-    /* MUSIC */
-
-    .music {
-      text-align: center;
-    }
-
-    .music img {
-      max-width: 480px;
-      width: 100%;
-      border-radius: 20px;
-      margin-bottom: 25px;
-    }
-
-    /* ICE CREAM */
-
-    .icecream {
-      text-align: center;
-    }
-
-    .icecream-box {
-      max-width: 600px;
-      margin: auto;
-      padding: 40px;
-      border: 1px solid rgba(255,255,255,.2);
-      border-radius: 20px;
-    }
-
-    .icecream h2 {
-      font-size: 2.2rem;
-      margin-bottom: 15px;
-    }
-
-    /* FUTURE GALLERY */
-
-    .memories {
-      text-align: center;
-    }
-
-    .memories-box {
-      border: 2px dashed rgba(255,255,255,.25);
-      padding: 60px 25px;
-      border-radius: 20px;
-    }
-
-    .memories h2 {
-      font-size: 2.4rem;
-      margin-bottom: 10px;
-    }
-
-    footer {
-      padding: 40px 20px;
-      text-align: center;
-      opacity: .65;
-    }
-
-    @media (max-width: 700px) {
-
-      .feature {
-        grid-template-columns: 1fr;
-      }
-
-      .hero img {
-        width: 240px;
-        height: 310px;
-      }
-
-      section {
-        padding: 60px 18px;
-      }
-    }
-
-  </style>
+</style>
 </head>
+
 
 <body>
 
-  <!-- OPENING -->
 
-  <section class="hero">
+<!-- HERO -->
+
+<header class="hero">
+
     <div class="hero-content">
 
-      <img src="jenelle-portrait.png" alt="Jenelle">
+        <h1 class="hero-title">
+            TXGURL50
+        </h1>
 
-      <h1>TXGURL50</h1>
+        <div class="hero-script">
+            Fifty Looks Good on You
+        </div>
 
-      <h2>Happy 50th, Jenelle!</h2>
-
-      <p>
-        Celebrating 50 years of life, laughter, music,
-        miles and unforgettable memories.
-      </p>
+        <div class="hero-subtitle">
+            Happy 50th, Jenelle!
+        </div>
 
     </div>
-  </section>
+
+</header>
 
 
-  <!-- PHOTOS -->
+<!-- CELEBRATING 50 -->
 
-  <section>
+<section class="section-dark">
+
+    <div class="container intro-grid">
+
+        <div class="photo-card">
+
+            <img
+                src="jenelle-portrait.png"
+                alt="Jenelle"
+            >
+
+        </div>
+
+        <div class="intro-copy">
+
+            <h2>
+                Celebrating 50 Years
+            </h2>
+
+            <p>
+                Celebrating 50 years of life, laughter,
+                music, miles and unforgettable memories.
+            </p>
+
+            <div class="script-message">
+                Here's to the next amazing chapter.
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- 50 LOOKS GOOD -->
+
+<section class="section-dark">
 
     <div class="container">
 
-      <h2 class="section-title">50 Looks Good on You</h2>
+        <h2 class="section-title">
+            50 Looks Good on You
+        </h2>
 
-      <div class="photo-grid">
+        <div class="gold-line"></div>
 
-        <img src="jenelle-glasses.jpg" alt="Jenelle smiling">
+        <div class="story-grid">
 
-        <img src="jenelle-dallas.jpg" alt="Jenelle in Dallas">
+            <div class="story-card">
 
-      </div>
+                <img
+                    src="jenelle-glasses.jpg"
+                    alt="Jenelle smiling"
+                >
+
+                <div class="story-copy">
+
+                    <h3>
+                        Living
+                    </h3>
+
+                    <p>
+                        Fifty years of style, smiles and
+                        making every chapter your own.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="story-card">
+
+                <img
+                    src="jenelle-dallas.jpg"
+                    alt="Jenelle in Dallas"
+                >
+
+                <div class="story-copy">
+
+                    <h3>
+                        Texas Girl
+                    </h3>
+
+                    <p>
+                        Big personality, big heart
+                        and unmistakably Texas.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
 
-  </section>
+</section>
 
 
-  <!-- RUNNING -->
+<!-- RUNNING -->
 
-  <section>
+<section class="section-dark">
 
-    <div class="container feature">
+    <div class="container running-grid">
 
-      <img src="jenelle-running.jpg" alt="Jenelle running">
+        <div class="running-photo">
 
-      <div>
+            <img
+                src="jenelle-running.jpg"
+                alt="Jenelle running"
+            >
 
-        <h2>Still Running the Show</h2>
+        </div>
 
-        <p>
-          Fifty isn't the finish line — it's another starting line.
-          Here's to more miles, more adventures and a whole lot more life.
-        </p>
 
-      </div>
+        <div class="running-copy">
+
+            <h2>
+                Still Running the Show
+            </h2>
+
+            <h3>
+                And the miles keep coming.
+            </h3>
+
+            <p>
+                Fifty isn't the finish line.
+                It's another starting line —
+                with more miles, more adventures
+                and plenty more memories ahead.
+            </p>
+
+        </div>
 
     </div>
 
-  </section>
+</section>
 
 
-  <!-- MUSIC -->
+<!-- MUSIC / SHAUN -->
 
-  <section class="music">
+<section class="section-dark music-section">
 
     <div class="container">
 
-      <h2 class="section-title">The Soundtrack of Life</h2>
+        <h2 class="section-title">
+            The Soundtrack of Life
+        </h2>
 
-      <img src="jenelle-shaun.jpg" alt="Jenelle and Shaun Martin">
+        <div class="gold-line"></div>
 
-      <p>
-        Music connects us to people, places and moments we'll never forget.
-        Some songs carry memories that last forever.
-      </p>
+        <div class="music-photo">
 
-      <!-- We can add the Shaun Martin YouTube video here later -->
+            <img
+                src="jenelle-shaun.jpg"
+                alt="Jenelle and Shaun"
+            >
+
+        </div>
+
+        <div class="music-copy">
+
+            <p>
+                Some people and some songs become part of
+                the soundtrack of our lives.
+                Music has a way of carrying memories,
+                friendships and moments with us forever.
+            </p>
+
+            <!-- We'll add Shaun Martin's YouTube link here -->
+
+            <a href="#"
+               class="music-button">
+               LISTEN & REMEMBER
+            </a>
+
+        </div>
 
     </div>
 
-  </section>
+</section>
 
 
-  <!-- ICE CREAM -->
+<!-- JENI'S -->
 
-  <section class="icecream">
+<section class="section-dark">
 
     <div class="container">
 
-      <div class="icecream-box">
+        <div class="icecream-box">
 
-        <h2>🍦 Of Course There's Ice Cream</h2>
+            <div class="icecream-icon">
+                🍦
+            </div>
 
-        <p>
-          Because no 50th birthday celebration is complete
-          without something sweet.
-        </p>
+            <h2>
+                Something Sweet for 50
+            </h2>
 
-        <br>
+            <p>
+                Because birthdays deserve ice cream —
+                especially when Jeni's is involved.
+            </p>
 
-        <p>
-          <strong>Your Jeni's surprise is coming...</strong>
-        </p>
+            <p>
+                A little birthday treat is waiting for you.
+            </p>
 
-        <!-- Gift card/link can go here -->
+            <!-- We'll connect the gift card here -->
 
-      </div>
+            <a href="#"
+               class="gift-button">
+               YOUR JENI'S SURPRISE
+            </a>
+
+        </div>
 
     </div>
 
-  </section>
+</section>
 
 
-  <!-- PARTY PHOTOS -->
+<!-- PARTY GALLERY -->
 
-  <section class="memories">
+<section class="section-dark">
 
     <div class="container">
 
-      <div class="memories-box">
+        <div class="gallery-coming">
 
-        <h2>50th Birthday Memories</h2>
+            <div class="camera">
+                📸
+            </div>
 
-        <p>
-          The celebration is just getting started.
-        </p>
+            <h2>
+                The Night We Celebrated 50
+            </h2>
 
-        <p>
-          Party photos coming soon. 📸
-        </p>
+            <p>
+                Tonight becomes tomorrow's memories.
+            </p>
 
-      </div>
+            <p>
+                Photos from Jenelle's 50th celebration
+                are coming soon.
+            </p>
+
+        </div>
 
     </div>
 
-  </section>
+</section>
 
 
-  <footer>
-    Made with ❤️ to celebrate Jenelle's 50th.
-  </footer>
+<!-- END -->
+
+<section class="section-dark final-section">
+
+    <h2>
+        Here's to 50 and beyond! ♥
+    </h2>
+
+    <p>
+        LOVE • LAUGH • LIVE • ENJOY
+    </p>
+
+</section>
 
 
 </body>
