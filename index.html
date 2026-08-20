@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Txgurl Turns 50 | Celebrating Jenelle</title>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&family=Lobster&display=swap"
+rel="stylesheet"
+>
 
 <style>
 
@@ -42,18 +50,20 @@ body {
 .hero {
     min-height: 100vh;
     position: relative;
+
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
+
     overflow: hidden;
 
     background:
         linear-gradient(
             to bottom,
-            rgba(0,0,0,.12) 0%,
-            rgba(0,0,0,.18) 45%,
-            rgba(0,0,0,.52) 75%,
-            rgba(8,8,8,.96) 100%
+            rgba(0,0,0,.08) 0%,
+            rgba(0,0,0,.08) 52%,
+            rgba(0,0,0,.35) 78%,
+            rgba(8,8,8,.97) 100%
         ),
         url("dallas-skyline.png");
 
@@ -62,114 +72,154 @@ body {
     background-repeat: no-repeat;
 }
 
+
+/* Hero text container */
+
 .hero-content {
-    width: min(1350px, 94%);
-    margin: auto;
-    text-align: center;
-    padding: 90px 20px 80px;
+
+    width: min(760px, 90%);
+
+    margin-left: clamp(24px, 5vw, 85px);
+    margin-top: clamp(40px, 7vh, 85px);
+
+    text-align: left;
+
+    padding: 22px 28px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.46),
+            rgba(0,0,0,.16),
+            transparent
+        );
+
+    border-radius: 22px;
 }
 
 
-/* Txgurl + Turns + 50 */
+/* Top line */
 
 .hero-mainline {
     display: flex;
-    justify-content: center;
+
     align-items: center;
-    gap: 22px;
-    flex-wrap: nowrap;
+    justify-content: flex-start;
+
+    gap: 18px;
+
+    white-space: nowrap;
 }
+
+
+/* TXGURL */
 
 .txgurl {
-    font-family: "Brush Script MT", "Segoe Script", cursive;
-    font-size: clamp(5.5rem, 12vw, 11rem);
-    font-style: italic;
-    line-height: .8;
+
+    font-family: "Lobster", cursive;
+
+    font-size: clamp(4.4rem, 8vw, 7.6rem);
+
+    line-height: .9;
+
     color: var(--gold-light);
 
     text-shadow:
-        0 4px 5px rgba(0,0,0,.9),
-        0 0 16px rgba(216,180,122,.28);
+        0 4px 5px rgba(0,0,0,.95),
+        0 0 16px rgba(239,207,151,.22);
 }
+
+
+/* TURNS */
 
 .turns {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(1.4rem, 3.2vw, 2.8rem);
-    letter-spacing: 10px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(1.15rem, 2vw, 1.8rem);
+
+    font-weight: 600;
+
+    letter-spacing: 7px;
+
     color: var(--gold-light);
-    margin-top: 35px;
+
+    margin-top: 20px;
 }
+
+
+/* BIG 50 */
 
 .big-50 {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(8rem, 17vw, 14rem);
-    line-height: .8;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(6rem, 10vw, 9.5rem);
+
+    line-height: .75;
+
+    font-weight: 500;
+
     color: var(--gold-light);
-    font-weight: 400;
 
     text-shadow:
-        0 5px 6px rgba(0,0,0,.95),
-        0 0 22px rgba(216,180,122,.35);
+        0 5px 7px rgba(0,0,0,.95),
+        0 0 18px rgba(239,207,151,.22);
 }
 
 
-/* Fifty Looks Good */
+/* Fifty Looks Good on You */
 
 .hero-script {
-    margin-top: 18px;
 
-    font-family: "Brush Script MT", "Segoe Script", cursive;
-    font-size: clamp(2.4rem, 5.5vw, 4.8rem);
-    font-style: italic;
+    font-family: "Great Vibes", cursive;
+
+    font-size: clamp(2.5rem, 4.5vw, 4rem);
 
     color: var(--gold);
-    text-shadow: 0 3px 6px rgba(0,0,0,.9);
+
+    margin-top: 15px;
+    margin-left: 8px;
+
+    line-height: 1.15;
+
+    text-shadow:
+        0 3px 6px rgba(0,0,0,.95);
 }
 
 
 /* Birthday greeting */
 
 .hero-birthday {
-    position: relative;
+
     display: inline-block;
 
-    margin-top: 32px;
-    padding: 12px 42px;
+    margin-top: 28px;
+
+    padding: 10px 0;
 
     font-family: Arial, Helvetica, sans-serif;
-    font-size: clamp(1.35rem, 3vw, 2.5rem);
-    font-weight: 800;
-    letter-spacing: 6px;
 
-    color: #fff4e5;
+    font-size: clamp(1.2rem, 2.4vw, 2rem);
+
+    font-weight: 800;
+
+    letter-spacing: 5px;
+
+    color: #fff3df;
 
     text-shadow:
-        0 2px 4px #000,
-        0 0 10px rgba(239,207,151,.24);
+        0 3px 6px rgba(0,0,0,1);
 }
 
-.hero-birthday::before,
-.hero-birthday::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    width: 110px;
-    height: 1px;
-    background: var(--gold);
-}
-
-.hero-birthday::before {
-    right: 100%;
-}
-
-.hero-birthday::after {
-    left: 100%;
-}
 
 .hero-heart {
-    margin-top: 8px;
+
     color: var(--gold);
+
     font-size: 1.5rem;
+
+    margin-top: 5px;
 }
 
 
@@ -188,22 +238,36 @@ section {
 
 .section-dark {
     background:
-        radial-gradient(circle at top, #181818 0%, #0b0b0b 60%);
+        radial-gradient(
+            circle at top,
+            #181818 0%,
+            #0b0b0b 60%
+        );
 }
 
 .section-title {
+
     font-family: Georgia, "Times New Roman", serif;
+
     color: var(--cream);
+
     text-align: center;
+
     font-size: clamp(2rem, 5vw, 3.5rem);
+
     font-weight: 400;
+
     margin-bottom: 15px;
 }
 
 .gold-line {
+
     width: 80px;
+
     height: 1px;
+
     background: var(--gold);
+
     margin: 20px auto 45px;
 }
 
@@ -213,45 +277,82 @@ section {
 ================================================== */
 
 .intro-grid {
+
     display: grid;
+
     grid-template-columns: .9fr 1.1fr;
+
     gap: 60px;
+
     align-items: center;
 }
 
 .photo-card {
+
     border-radius: 24px;
+
     overflow: hidden;
-    border: 1px solid rgba(216,180,122,.45);
-    box-shadow: 0 20px 60px rgba(0,0,0,.55);
+
+    border:
+        1px solid rgba(216,180,122,.45);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.55);
 }
 
 .photo-card img {
+
     width: 100%;
+
     height: auto;
+
     display: block;
 }
 
 .intro-copy h2 {
-    font-family: Georgia, "Times New Roman", serif;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
     color: var(--cream);
+
     font-weight: 400;
-    font-size: clamp(2.4rem, 5vw, 4rem);
+
+    font-size:
+        clamp(2.4rem, 5vw, 4rem);
+
     line-height: 1.2;
+
     margin-bottom: 25px;
 }
 
 .intro-copy p {
+
     color: #ddd5ca;
-    font-family: Georgia, "Times New Roman", serif;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
     font-size: 1.3rem;
 }
 
 .script-message {
+
     color: var(--gold);
-    font-family: Georgia, "Times New Roman", serif;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
     font-style: italic;
+
     font-size: 2rem;
+
     margin-top: 30px;
 }
 
@@ -261,21 +362,35 @@ section {
 ================================================== */
 
 .story-grid {
+
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
     gap: 30px;
 }
 
 .story-card {
-    background: rgba(255,255,255,.025);
-    border: 1px solid rgba(216,180,122,.25);
+
+    background:
+        rgba(255,255,255,.025);
+
+    border:
+        1px solid
+        rgba(216,180,122,.25);
+
     border-radius: 24px;
+
     overflow: hidden;
 }
 
 .story-card img {
+
     width: 100%;
+
     height: auto;
+
     display: block;
 }
 
@@ -284,10 +399,18 @@ section {
 }
 
 .story-copy h3 {
-    font-family: Georgia, "Times New Roman", serif;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
     color: var(--gold);
+
     font-size: 1.8rem;
+
     font-weight: 400;
+
     margin-bottom: 7px;
 }
 
@@ -301,37 +424,67 @@ section {
 ================================================== */
 
 .running-grid {
+
     display: grid;
-    grid-template-columns: 1fr 1fr;
+
+    grid-template-columns:
+        1fr 1fr;
+
     gap: 60px;
+
     align-items: center;
 }
 
 .running-photo img {
+
     width: 100%;
+
     height: auto;
+
     display: block;
+
     border-radius: 24px;
-    border: 1px solid rgba(216,180,122,.4);
+
+    border:
+        1px solid
+        rgba(216,180,122,.4);
 }
 
 .running-copy h2 {
+
     color: var(--cream);
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(2.5rem, 5vw, 4rem);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(2.5rem, 5vw, 4rem);
+
     font-weight: 400;
 }
 
 .running-copy h3 {
+
     color: var(--gold);
-    font-family: Georgia, "Times New Roman", serif;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
     font-style: italic;
+
     font-size: 2rem;
+
     margin: 10px 0 20px;
 }
 
 .running-copy p {
+
     color: #d2cdc6;
+
     font-size: 1.15rem;
 }
 
@@ -345,40 +498,71 @@ section {
 }
 
 .music-photo {
+
     max-width: 650px;
-    margin: 40px auto 35px;
+
+    margin:
+        40px auto 35px;
 }
 
 .music-photo img {
+
     width: 100%;
+
     height: auto;
+
     display: block;
+
     border-radius: 24px;
-    border: 1px solid rgba(216,180,122,.45);
+
+    border:
+        1px solid
+        rgba(216,180,122,.45);
 }
 
 .music-copy {
+
     max-width: 750px;
+
     margin: auto;
+
     color: #d7d0c7;
-    font-family: Georgia, "Times New Roman", serif;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
     font-size: 1.2rem;
 }
 
 .music-button {
+
     display: inline-block;
+
     margin-top: 30px;
-    padding: 14px 28px;
-    border: 1px solid var(--gold);
+
+    padding:
+        14px 28px;
+
+    border:
+        1px solid var(--gold);
+
     border-radius: 100px;
+
     color: var(--gold);
+
     text-decoration: none;
+
     letter-spacing: 2px;
+
     transition: .25s ease;
 }
 
 .music-button:hover {
+
     background: var(--gold);
+
     color: #111;
 }
 
@@ -388,12 +572,21 @@ section {
 ================================================== */
 
 .icecream-box {
+
     max-width: 750px;
+
     margin: auto;
+
     text-align: center;
-    padding: 65px 35px;
+
+    padding:
+        65px 35px;
+
     border-radius: 28px;
-    border: 1px solid rgba(216,180,122,.45);
+
+    border:
+        1px solid
+        rgba(216,180,122,.45);
 
     background:
         linear-gradient(
@@ -404,64 +597,110 @@ section {
 }
 
 .icecream-icon {
+
     font-size: 3.5rem;
+
     margin-bottom: 15px;
 }
 
 .icecream-box h2 {
-    font-family: Georgia, "Times New Roman", serif;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
     color: var(--cream);
-    font-size: clamp(2.2rem, 5vw, 3.5rem);
+
+    font-size:
+        clamp(2.2rem, 5vw, 3.5rem);
+
     font-weight: 400;
 }
 
 .icecream-box p {
+
     max-width: 550px;
-    margin: 18px auto 0;
+
+    margin:
+        18px auto 0;
+
     color: #d5cec4;
+
     font-size: 1.1rem;
 }
 
 .gift-button {
+
     display: inline-block;
+
     margin-top: 30px;
+
     background: var(--gold);
+
     color: #111;
+
     text-decoration: none;
-    padding: 15px 30px;
+
+    padding:
+        15px 30px;
+
     border-radius: 100px;
+
     font-weight: bold;
 }
 
 
 /* ==================================================
-   FUTURE PARTY GALLERY
+   FUTURE GALLERY
 ================================================== */
 
 .gallery-coming {
+
     max-width: 900px;
+
     margin: auto;
+
     text-align: center;
-    padding: 80px 25px;
-    border: 1px dashed rgba(216,180,122,.55);
+
+    padding:
+        80px 25px;
+
+    border:
+        1px dashed
+        rgba(216,180,122,.55);
+
     border-radius: 28px;
 }
 
 .gallery-coming h2 {
-    font-family: Georgia, "Times New Roman", serif;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
     color: var(--cream);
-    font-size: clamp(2.4rem, 5vw, 4rem);
+
+    font-size:
+        clamp(2.4rem, 5vw, 4rem);
+
     font-weight: 400;
 }
 
 .gallery-coming p {
+
     color: #cfc8bf;
+
     margin-top: 15px;
+
     font-size: 1.1rem;
 }
 
 .camera {
+
     font-size: 3rem;
+
     margin-bottom: 20px;
 }
 
@@ -471,21 +710,36 @@ section {
 ================================================== */
 
 .final-section {
+
     text-align: center;
-    padding: 110px 20px;
+
+    padding:
+        110px 20px;
 }
 
 .final-section h2 {
-    font-family: Georgia, "Times New Roman", serif;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
     font-style: italic;
+
     color: var(--gold);
-    font-size: clamp(3rem, 7vw, 5.5rem);
+
+    font-size:
+        clamp(3rem, 7vw, 5.5rem);
+
     font-weight: 400;
 }
 
 .final-section p {
+
     margin-top: 25px;
+
     letter-spacing: 5px;
+
     color: var(--cream);
 }
 
@@ -497,68 +751,103 @@ section {
 @media (max-width: 750px) {
 
     .hero {
+
         min-height: 82vh;
-        background-position: 58% center;
+
+        background-position:
+            60% center;
     }
 
     .hero-content {
-        padding: 75px 14px 60px;
+
+        width: 94%;
+
+        margin-left: 10px;
+
+        margin-top: 30px;
+
+        padding:
+            18px 14px;
+
+        background:
+            linear-gradient(
+                90deg,
+                rgba(0,0,0,.58),
+                rgba(0,0,0,.15),
+                transparent
+            );
     }
 
     .hero-mainline {
+
         gap: 7px;
+
         flex-wrap: wrap;
     }
 
     .txgurl {
-        width: 100%;
-        font-size: clamp(4.5rem, 22vw, 7rem);
+
+        font-size:
+            clamp(4rem, 18vw, 5.8rem);
     }
 
     .turns {
-        font-size: 1rem;
-        letter-spacing: 4px;
+
+        font-size: .85rem;
+
+        letter-spacing: 3px;
+
         margin-top: 0;
     }
 
     .big-50 {
-        font-size: clamp(6rem, 30vw, 9rem);
+
+        font-size:
+            clamp(5rem, 24vw, 7.5rem);
     }
 
     .hero-script {
-        font-size: clamp(2.1rem, 10vw, 3.4rem);
-        margin-top: 5px;
+
+        font-size:
+            clamp(2.1rem, 10vw, 3.1rem);
+
+        margin-left: 2px;
+
+        margin-top: 9px;
     }
 
     .hero-birthday {
-        font-size: 1rem;
-        letter-spacing: 3px;
-        padding: 10px 10px;
-        margin-top: 22px;
-    }
 
-    .hero-birthday::before,
-    .hero-birthday::after {
-        display: none;
+        font-size: 1rem;
+
+        letter-spacing: 2px;
+
+        margin-top: 20px;
     }
 
     section {
-        padding: 65px 18px;
+
+        padding:
+            65px 18px;
     }
 
     .intro-grid,
     .running-grid,
     .story-grid {
+
         grid-template-columns: 1fr;
     }
 
     .intro-grid,
     .running-grid {
+
         gap: 35px;
     }
+
 }
 
 </style>
+
 </head>
 
 
@@ -587,16 +876,25 @@ section {
 
         </div>
 
+
         <div class="hero-script">
+
             Fifty Looks Good on You
+
         </div>
+
 
         <div class="hero-birthday">
+
             HAPPY BIRTHDAY, JENELLE!
+
         </div>
 
+
         <div class="hero-heart">
+
             ♡
+
         </div>
 
     </div>
@@ -619,6 +917,7 @@ section {
 
         </div>
 
+
         <div class="intro-copy">
 
             <h2>
@@ -626,12 +925,15 @@ section {
             </h2>
 
             <p>
-                Celebrating 50 years of life, laughter,
-                music, miles and unforgettable memories.
+                Celebrating 50 years of life,
+                laughter, music, miles and
+                unforgettable memories.
             </p>
 
             <div class="script-message">
+
                 Here's to the next amazing chapter.
+
             </div>
 
         </div>
@@ -648,12 +950,17 @@ section {
     <div class="container">
 
         <h2 class="section-title">
+
             50 Looks Good on You
+
         </h2>
+
 
         <div class="gold-line"></div>
 
+
         <div class="story-grid">
+
 
             <div class="story-card">
 
@@ -669,8 +976,9 @@ section {
                     </h3>
 
                     <p>
-                        Fifty years of style, smiles and
-                        making every chapter your own.
+                        Fifty years of style,
+                        smiles and making every
+                        chapter your own.
                     </p>
 
                 </div>
@@ -692,13 +1000,15 @@ section {
                     </h3>
 
                     <p>
-                        Big personality, big heart
-                        and unmistakably Texas.
+                        Big personality,
+                        big heart and
+                        unmistakably Texas.
                     </p>
 
                 </div>
 
             </div>
+
 
         </div>
 
@@ -713,6 +1023,7 @@ section {
 
     <div class="container running-grid">
 
+
         <div class="running-photo">
 
             <img
@@ -726,21 +1037,31 @@ section {
         <div class="running-copy">
 
             <h2>
+
                 Still Running the Show
+
             </h2>
 
+
             <h3>
+
                 And the miles keep coming.
+
             </h3>
 
+
             <p>
+
                 Fifty isn't the finish line.
                 It's another starting line —
-                with more miles, more adventures
+                with more miles,
+                more adventures
                 and plenty more memories ahead.
+
             </p>
 
         </div>
+
 
     </div>
 
@@ -753,11 +1074,16 @@ section {
 
     <div class="container">
 
+
         <h2 class="section-title">
+
             The Soundtrack of Life
+
         </h2>
 
+
         <div class="gold-line"></div>
+
 
         <div class="music-photo">
 
@@ -768,19 +1094,32 @@ section {
 
         </div>
 
+
         <div class="music-copy">
 
+
             <p>
-                Some people and some songs become part of
-                the soundtrack of our lives.
-                Music has a way of carrying memories,
-                friendships and moments with us forever.
+
+                Some people and some songs
+                become part of the soundtrack
+                of our lives.
+
+                Music has a way of carrying
+                memories, friendships and
+                moments with us forever.
+
             </p>
 
-            <a href="#"
-               class="music-button">
-               LISTEN & REMEMBER
+
+            <a
+                href="#"
+                class="music-button"
+            >
+
+                LISTEN & REMEMBER
+
             </a>
+
 
         </div>
 
@@ -795,29 +1134,50 @@ section {
 
     <div class="container">
 
+
         <div class="icecream-box">
 
+
             <div class="icecream-icon">
+
                 🍦
+
             </div>
 
+
             <h2>
+
                 Something Sweet for 50
+
             </h2>
 
-            <p>
-                Because birthdays deserve ice cream —
-                especially when Jeni's is involved.
-            </p>
 
             <p>
-                A little birthday treat is waiting for you.
+
+                Because birthdays deserve
+                ice cream — especially when
+                Jeni's is involved.
+
             </p>
 
-            <a href="#"
-               class="gift-button">
-               YOUR JENI'S SURPRISE
+
+            <p>
+
+                A little birthday treat
+                is waiting for you.
+
+            </p>
+
+
+            <a
+                href="#"
+                class="gift-button"
+            >
+
+                YOUR JENI'S SURPRISE
+
             </a>
+
 
         </div>
 
@@ -832,24 +1192,40 @@ section {
 
     <div class="container">
 
+
         <div class="gallery-coming">
 
+
             <div class="camera">
+
                 📸
+
             </div>
 
+
             <h2>
+
                 The Night We Celebrated 50
+
             </h2>
 
-            <p>
-                Tonight becomes tomorrow's memories.
-            </p>
 
             <p>
-                Photos from Jenelle's 50th celebration
-                are coming soon.
+
+                Tonight becomes
+                tomorrow's memories.
+
             </p>
+
+
+            <p>
+
+                Photos from Jenelle's
+                50th celebration
+                are coming soon.
+
+            </p>
+
 
         </div>
 
@@ -862,16 +1238,24 @@ section {
 
 <section class="section-dark final-section">
 
+
     <h2>
+
         Here's to 50 and beyond! ♥
+
     </h2>
 
+
     <p>
+
         LOVE • LAUGH • LIVE • ENJOY
+
     </p>
+
 
 </section>
 
 
 </body>
+
 </html>
