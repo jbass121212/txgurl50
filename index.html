@@ -607,6 +607,23 @@ section {
     margin-bottom: 15px;
 }
 
+.gift-card-image {
+    width: min(520px, 100%);
+    height: auto;
+
+    display: block;
+
+    margin: 0 auto 30px;
+
+    border-radius: 22px;
+
+    border: 1px solid rgba(255,255,255,.14);
+
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.5),
+        0 0 24px rgba(216,180,122,.12);
+}
+
 .icecream-box h2 {
     font-family:
         Georgia,
@@ -649,6 +666,16 @@ section {
     border-radius: 100px;
 
     font-weight: bold;
+}
+
+.gift-private-note {
+    margin-top: 18px !important;
+
+    color: #aaa39a !important;
+
+    font-size: .92rem !important;
+
+    font-style: italic;
 }
 
 
@@ -1109,9 +1136,11 @@ section {
         <div class="icecream-box">
 
 
-            <div class="icecream-icon">
-                🍦
-            </div>
+            <img
+                src="jenis-gift-card.jpeg"
+                alt="Jeni's Splendid Ice Creams gift card"
+                class="gift-card-image"
+            >
 
 
             <h2>
@@ -1120,24 +1149,20 @@ section {
 
 
             <p>
-                Because birthdays deserve
-                ice cream — especially when
-                Jeni's is involved.
+                Happy Birthday Jenelle! Here's a little
+                something sweet for your next
+                people-watching session! 🍨
             </p>
 
 
-            <p>
-                A little birthday treat
-                is waiting for you.
+            <div class="gift-button">
+                $50 JENI'S BIRTHDAY TREAT
+            </div>
+
+
+            <p class="gift-private-note">
+                Gift-card details sent privately.
             </p>
-
-
-            <a
-                href="#"
-                class="gift-button"
-            >
-                YOUR JENI'S SURPRISE
-            </a>
 
 
         </div>
