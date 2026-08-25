@@ -106,13 +106,9 @@ body {
 
 .txgurl {
     font-family: "Cormorant Garamond", Georgia, serif;
-
     font-size: clamp(4.5rem, 8vw, 7.5rem);
-
     font-weight: 600;
-
     line-height: .85;
-
     letter-spacing: 4px;
 
     color: var(--gold-light);
@@ -137,31 +133,19 @@ body {
     margin-left: 8px;
 }
 
-
-/* TURNS */
-
 .turns {
     font-family: "Cormorant Garamond", Georgia, serif;
-
     font-size: clamp(1.25rem, 2.1vw, 1.9rem);
-
     font-weight: 600;
-
     letter-spacing: 9px;
 
     color: var(--gold-light);
 }
 
-
-/* 50 */
-
 .big-50 {
     font-family: "Cormorant Garamond", Georgia, serif;
-
     font-size: clamp(5.8rem, 9vw, 8.5rem);
-
     font-weight: 500;
-
     line-height: .7;
 
     color: var(--gold-light);
@@ -176,7 +160,6 @@ body {
 
 .hero-script {
     font-family: "Great Vibes", cursive;
-
     font-size: clamp(2.6rem, 4.5vw, 4.2rem);
 
     color: var(--gold);
@@ -231,9 +214,7 @@ body {
 
 .hero-heart {
     color: var(--gold-light);
-
     font-size: 1.8rem;
-
     line-height: 1;
 }
 
@@ -242,13 +223,9 @@ body {
 
 .hero-birthday {
     font-family: "Cormorant Garamond", Georgia, serif;
-
     font-size: clamp(1.7rem, 3vw, 2.6rem);
-
     font-weight: 600;
-
     letter-spacing: 6px;
-
     line-height: 1.2;
 
     color: var(--cream);
@@ -291,7 +268,6 @@ section {
     text-align: center;
 
     font-size: clamp(2rem, 5vw, 3.5rem);
-
     font-weight: 400;
 
     margin-bottom: 15px;
@@ -313,7 +289,6 @@ section {
 
 .intro-grid {
     display: grid;
-
     grid-template-columns: .9fr 1.1fr;
 
     gap: 60px;
@@ -323,7 +298,6 @@ section {
 
 .photo-card {
     border-radius: 24px;
-
     overflow: hidden;
 
     border:
@@ -336,6 +310,7 @@ section {
 .photo-card img {
     width: 100%;
     height: auto;
+
     display: block;
 }
 
@@ -429,7 +404,6 @@ section {
     color: var(--gold);
 
     font-size: 1.8rem;
-
     font-weight: 400;
 
     margin-bottom: 7px;
@@ -601,12 +575,6 @@ section {
         );
 }
 
-.icecream-icon {
-    font-size: 3.5rem;
-
-    margin-bottom: 15px;
-}
-
 .gift-card-image {
     width: min(520px, 100%);
     height: auto;
@@ -617,7 +585,8 @@ section {
 
     border-radius: 22px;
 
-    border: 1px solid rgba(255,255,255,.14);
+    border:
+        1px solid rgba(255,255,255,.14);
 
     box-shadow:
         0 18px 45px rgba(0,0,0,.5),
@@ -680,26 +649,36 @@ section {
 
 
 /* ==================================================
-   FUTURE GALLERY
+   PARTY GALLERY
 ================================================== */
 
-.gallery-coming {
-    max-width: 900px;
-
-    margin: auto;
-
-    text-align: center;
-
-    padding:
-        80px 25px;
-
-    border:
-        1px dashed rgba(216,180,122,.55);
-
-    border-radius: 28px;
+.party-gallery {
+    padding-top: 105px;
+    padding-bottom: 110px;
 }
 
-.gallery-coming h2 {
+.gallery-intro {
+    max-width: 760px;
+
+    margin:
+        0 auto 45px;
+
+    text-align: center;
+}
+
+.gallery-date {
+    color: var(--gold);
+
+    letter-spacing: 5px;
+
+    font-size: .8rem;
+
+    margin-bottom: 10px;
+
+    text-transform: uppercase;
+}
+
+.gallery-intro h2 {
     font-family:
         Georgia,
         "Times New Roman",
@@ -708,23 +687,270 @@ section {
     color: var(--cream);
 
     font-size:
-        clamp(2.4rem, 5vw, 4rem);
+        clamp(2.5rem, 6vw, 4.4rem);
 
     font-weight: 400;
+
+    line-height: 1.1;
 }
 
-.gallery-coming p {
+.gallery-intro p {
     color: #cfc8bf;
 
-    margin-top: 15px;
+    margin-top: 16px;
 
     font-size: 1.1rem;
 }
 
-.camera {
-    font-size: 3rem;
 
-    margin-bottom: 20px;
+/* FEATURE PHOTO */
+
+.gallery-feature {
+    position: relative;
+
+    max-width: 900px;
+
+    margin:
+        0 auto 35px;
+
+    overflow: hidden;
+
+    border-radius: 28px;
+
+    border:
+        1px solid rgba(216,180,122,.5);
+
+    box-shadow:
+        0 25px 70px rgba(0,0,0,.6),
+        0 0 28px rgba(216,180,122,.08);
+}
+
+.gallery-feature img {
+    width: 100%;
+    height: auto;
+
+    display: block;
+
+    cursor: pointer;
+
+    transition:
+        transform .4s ease;
+}
+
+.gallery-feature:hover img {
+    transform: scale(1.012);
+}
+
+.gallery-feature-overlay {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding:
+        100px 35px 28px;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(0,0,0,.92)
+        );
+}
+
+.gallery-feature-overlay h3 {
+    font-family:
+        "Great Vibes",
+        cursive;
+
+    color: var(--gold-light);
+
+    font-size:
+        clamp(2.5rem, 6vw, 4.5rem);
+
+    font-weight: 400;
+
+    line-height: 1;
+}
+
+.gallery-feature-overlay p {
+    margin-top: 10px;
+
+    color: var(--soft-white);
+
+    letter-spacing: 3px;
+
+    font-size: .85rem;
+
+    text-transform: uppercase;
+}
+
+
+/* GALLERY GRID */
+
+.gallery-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 22px;
+}
+
+.gallery-item {
+    position: relative;
+
+    margin: 0;
+
+    overflow: hidden;
+
+    border-radius: 22px;
+
+    background: #111;
+
+    border:
+        1px solid rgba(216,180,122,.22);
+
+    box-shadow:
+        0 14px 38px rgba(0,0,0,.35);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 470px;
+
+    object-fit: cover;
+
+    display: block;
+
+    cursor: pointer;
+
+    transition:
+        transform .4s ease,
+        opacity .4s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.025);
+
+    opacity: .93;
+}
+
+
+/* PHOTO-SPECIFIC POSITIONING */
+
+.gallery-item.welcome img {
+    object-position: center;
+}
+
+.gallery-item.guest img {
+    object-position: center top;
+}
+
+.gallery-item.jonathan img {
+    object-position: center;
+}
+
+.gallery-item.gift img {
+    object-position: center;
+}
+
+
+/* FUTURE PHOTOS */
+
+.gallery-more {
+    max-width: 700px;
+
+    margin:
+        45px auto 0;
+
+    padding-top: 28px;
+
+    border-top:
+        1px solid rgba(216,180,122,.25);
+
+    text-align: center;
+}
+
+.gallery-more h3 {
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 1.8rem;
+
+    font-weight: 400;
+
+    color: var(--gold);
+}
+
+.gallery-more p {
+    margin-top: 8px;
+
+    color: #aaa39a;
+
+    font-size: .95rem;
+}
+
+
+/* ==================================================
+   LIGHTBOX
+================================================== */
+
+.photo-lightbox {
+    position: fixed;
+
+    inset: 0;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    background:
+        rgba(0,0,0,.94);
+
+    z-index: 9999;
+}
+
+.photo-lightbox.active {
+    display: flex;
+}
+
+.photo-lightbox img {
+    max-width: 95%;
+    max-height: 90vh;
+
+    object-fit: contain;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 15px 70px rgba(0,0,0,.8);
+}
+
+.lightbox-close {
+    position: absolute;
+
+    top: 20px;
+    right: 28px;
+
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 48px;
+
+    font-weight: 200;
+
+    cursor: pointer;
+
+    line-height: 1;
 }
 
 
@@ -855,6 +1081,89 @@ section {
     .intro-grid,
     .running-grid {
         gap: 35px;
+    }
+
+
+    /* GALLERY MOBILE */
+
+    .party-gallery {
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
+
+    .gallery-intro {
+        margin-bottom: 30px;
+    }
+
+    .gallery-date {
+        letter-spacing: 3px;
+    }
+
+    .gallery-feature {
+        border-radius: 20px;
+
+        margin-bottom: 18px;
+    }
+
+    .gallery-feature img {
+        width: 100%;
+        height: auto;
+
+        object-fit: contain;
+
+        background: #080808;
+    }
+
+    .gallery-feature-overlay {
+        padding:
+            70px 20px 20px;
+    }
+
+    .gallery-feature-overlay h3 {
+        font-size:
+            clamp(2.3rem, 12vw, 3.6rem);
+    }
+
+    .gallery-feature-overlay p {
+        letter-spacing: 2px;
+
+        font-size: .72rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+    }
+
+    .gallery-item {
+        border-radius: 18px;
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: auto;
+
+        max-height: 700px;
+
+        object-fit: contain;
+
+        background: #080808;
+    }
+
+    .gallery-more {
+        margin-top: 35px;
+    }
+
+    .photo-lightbox {
+        padding: 15px;
+    }
+
+    .lightbox-close {
+        top: 12px;
+        right: 18px;
+
+        font-size: 42px;
     }
 }
 
@@ -1178,38 +1487,154 @@ section {
      PARTY GALLERY
 ================================================== -->
 
-<section class="section-dark">
+<section class="section-dark party-gallery">
 
     <div class="container">
 
 
-        <div class="gallery-coming">
+        <div class="gallery-intro">
 
-
-            <div class="camera">
-                📸
+            <div class="gallery-date">
+                August 22, 2026
             </div>
-
 
             <h2>
                 The Night We Celebrated 50
             </h2>
 
+            <div class="gold-line"></div>
 
             <p>
-                Tonight becomes
-                tomorrow's memories.
+                A night filled with style, laughter,
+                friendship and memories worth keeping.
             </p>
 
+        </div>
 
-            <p>
-                Photos from Jenelle's
-                50th celebration
-                are coming soon.
-            </p>
+
+        <!-- ==================================================
+             FEATURE PHOTO
+        ================================================== -->
+
+        <div class="gallery-feature">
+
+            <img
+                src="jenelle-50-feature.jpg"
+                alt="Jenelle celebrating her 50th birthday"
+                onclick="openLightbox(this)"
+            >
+
+            <div class="gallery-feature-overlay">
+
+                <h3>
+                    50 &amp; Fabulous
+                </h3>
+
+                <p>
+                    Jenelle's No. 50
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ==================================================
+             PARTY PHOTO GRID
+        ================================================== -->
+
+        <div class="gallery-grid">
+
+
+            <!-- WELCOME SIGN -->
+
+            <figure class="gallery-item welcome">
+
+                <img
+                    src="jenelle-welcome.jpg"
+                    alt="Welcome to Jenelle's No. 50 celebration"
+                    onclick="openLightbox(this)"
+                >
+
+            </figure>
+
+
+            <!-- JENELLE + GUEST -->
+
+            <figure class="gallery-item guest">
+
+                <img
+                    src="jenelle-guest.jpg"
+                    alt="Jenelle celebrating with a guest"
+                    onclick="openLightbox(this)"
+                >
+
+            </figure>
+
+
+            <!-- JENELLE + JONATHAN -->
+
+            <figure class="gallery-item jonathan">
+
+                <img
+                    src="jenelle-jonathan.jpg"
+                    alt="Jenelle and Jonathan at her 50th birthday celebration"
+                    onclick="openLightbox(this)"
+                >
+
+            </figure>
+
+
+            <!-- PERSONALIZED GIFT -->
+
+            <figure class="gallery-item gift">
+
+                <img
+                    src="jenelle-gift.jpg"
+                    alt="Personalized Jenelle No. 50 gift"
+                    onclick="openLightbox(this)"
+                >
+
+            </figure>
+
+
+            <!-- ==================================================
+                 ADD FUTURE PHOTOS HERE
+
+                 Upload the picture to GitHub.
+
+                 Then duplicate this block:
+
+                 <figure class="gallery-item">
+
+                     <img
+                         src="your-new-photo.jpg"
+                         alt="Jenelle's 50th birthday celebration"
+                         onclick="openLightbox(this)"
+                     >
+
+                 </figure>
+
+                 You can keep adding as many as you want.
+            ================================================== -->
 
 
         </div>
+
+
+        <div class="gallery-more">
+
+            <h3>
+                More Memories to Come
+            </h3>
+
+            <p>
+                A few favorite moments for now —
+                with room for more from the night.
+            </p>
+
+        </div>
+
 
     </div>
 
@@ -1231,6 +1656,91 @@ section {
     </p>
 
 </section>
+
+
+<!-- ==================================================
+     PHOTO LIGHTBOX
+================================================== -->
+
+<div
+    id="photoLightbox"
+    class="photo-lightbox"
+    onclick="closeLightbox()"
+>
+
+    <button
+        class="lightbox-close"
+        aria-label="Close photo"
+        onclick="closeLightbox()"
+    >
+        &times;
+    </button>
+
+    <img
+        id="lightboxImage"
+        src=""
+        alt=""
+        onclick="event.stopPropagation()"
+    >
+
+</div>
+
+
+<script>
+
+/* ==================================================
+   OPEN LARGE PHOTO
+================================================== */
+
+function openLightbox(image) {
+
+    const lightbox =
+        document.getElementById("photoLightbox");
+
+    const lightboxImage =
+        document.getElementById("lightboxImage");
+
+    lightboxImage.src = image.src;
+
+    lightboxImage.alt = image.alt;
+
+    lightbox.classList.add("active");
+
+    document.body.style.overflow = "hidden";
+}
+
+
+/* ==================================================
+   CLOSE LARGE PHOTO
+================================================== */
+
+function closeLightbox() {
+
+    document
+        .getElementById("photoLightbox")
+        .classList
+        .remove("active");
+
+    document.body.style.overflow = "";
+}
+
+
+/* ESC KEY ALSO CLOSES PHOTO */
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (event.key === "Escape") {
+
+            closeLightbox();
+
+        }
+
+    }
+);
+
+</script>
 
 
 </body>
